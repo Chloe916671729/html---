@@ -103,7 +103,24 @@
 		b^2=c^2+a^2-2ca \cos B\\
 		c^2=a^2+b^2-2ab \cos C\)
 		餘弦定理證明：<br>
-		<img src="cos_proof.png"><br>
+		<div class="photo">
+			<script type="text/tikz">
+				\usetikzlibrary{positioning}
+				\begin{tikzpicture}[x = 1in, y = 1in, line width = 2pt]
+				\node[below left](A) at({-1/tan(deg(35))},0) {A};
+				\node[below](B) at(1,0) {B};
+				\node[above = 0.15in](C) at(0,1) {C};
+				\node[below](D) at(0,0) {D};
+				\draw ({-1/tan(deg(35))},0)--(1,0)--(0,1)--cycle;
+				\draw (0,1)--(0,0);
+				\node[above right] at({-0.5/tan(deg(35))},0.7) {b};
+				\node[below] at({-0.5/tan(deg(35))},0) {$b\cos (A)$};
+				\node[left] at(0,0.5) {$b\sin (A)$};
+				\node[above right] at(0.5,0.7) {a};
+				\node[below] at(0.5,0) {$c-b\cos (A)$};
+				\end{tikzpicture}
+			</script>
+		</div>
 		\(a^2=\overline{BC}^2\\
 		=\overline{CD}^2+\overline{BD}^2\\
 		=(b\sin A)^2+(c-b\cos A)^2\\
@@ -118,32 +135,32 @@
 		(\alpha - \beta)\\\)
 		\(\overline{PQ}^2= 1^2+1^2-2\times 1 \times 1 \times \cos(\alpha-\beta)\\\)
 		=2 - 2 \(\cos(\alpha-\beta)\)<br>
-		而根據畢氏定理<br>
+		而根據畢氏定理<br><br>
 		\(\overline{PQ}^2=\overline{PO}^2+\overline{QO}^2\)<br>
 		=\((\cos \alpha - \cos \beta)^2+(\sin \alpha - \sin \beta)^2\)<br>
 		=\((\cos^2 \alpha+\cos^2\beta -2\cos\alpha\times\cos\beta)\)
 		\(+(\sin ^2\alpha+\sin ^2\beta-2\sin\alpha\times\sin\beta)\)<br>
 		=2-2\((\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta)\)<br>
-		將兩個算式合併之後：<br>
+		將兩個算式合併之後：<br><br>
 		\(\overline{PQ}^2=2 - 2 \cos(\alpha-\beta)\)<br>
 		=2-2\((\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta)\)<br>
 		化減之後
 		\(\cos (\alpha-\beta)=\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta\\\)
-		餘弦\(\cos\)差角公式：<br>
+		餘弦\(\cos\)差角公式：<br><br>
 		\(\displaystyle\cos(\alpha+\beta)=\cos(\alpha-(-\beta))\\\)
 		\(\displaystyle=\cos \alpha \times \cos (-\beta)+\sin \alpha \times \sin (-\beta)\\\)
 		\(\displaystyle=\cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta\\\)
 		所以 \(\cos (\alpha +\beta) = \cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta \\\)
-		正弦\(\sin\)和角公式：<br>
+		正弦\(\sin\)和角公式：<br><br>
 		\(\displaystyle\sin (\alpha + \beta) = \cos (90^{\circ} - (\alpha + \beta))\\\)
 		\(\displaystyle=\cos((90^{\circ}-\alpha)-\beta)\\\)
 		\(\displaystyle=\cos(90^{\circ}-\alpha)\times \cos\beta -\sin (90^{\circ}-\alpha)\times \sin -\beta\\\)
 		\(\displaystyle=\sin\alpha\times\cos\beta +\cos\alpha\times\sin\beta\\\)
-		餘弦\(\sin\)差角公式：<br>
+		餘弦\(\sin\)差角公式：<br><br>
 		\(\sin(\alpha - \beta)=\sin (\alpha+(-\beta))\\\)
 		\(=\sin \alpha \times \cos (-\beta) + \cos \alpha \times \sin (-\beta)\\\)
 		\(=\sin \alpha \times \cos \beta - \cos \alpha \times \sin \beta\\\)
-		正切\(\tan\)和角證明：<br>
+		正切\(\tan\)和角證明：<br><br>
 		\(\displaystyle
 		\tan(\alpha+\beta)=\frac{\sin(\alpha+\beta)}{\cos(\alpha+\beta)}\\
 		\displaystyle = \frac{\sin \alpha \cos \beta + \cos \alpha \sin \beta}{\cos \alpha \cos \beta - \sin \alpha \sin
