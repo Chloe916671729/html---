@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+ul{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+#menu-word{
+    text-decoration: none;
+    color: #D8EBF2;
+    font-family: Microsoft-JhengHei;
+    font-size: 20px;
+    background-color: transparent;
+    letter-spacing: 1.5px;
+    line-height:40px;
+    font-weight: 300;
+}
+
+#menu-word:hover{
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    line-height:40px;
+    font-weight: 300;
+}
+
+.hero-menu{
+    width: 100%;
+}
+
+/*.menu{
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+}*/
+
+.menu-one{
+    position: absolute;
+    left: 30px;
+    top: 15px;
+}
+
+.menu-two{
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+.menu-three{
+    position: absolute;
+    right: 150px;
+    top: 15px;
+}
+
+.hero-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../hero_img.jpg);
+    height: 75%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header{
+    height:62.5%;
+    background-color: rgb(90,107,102);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /*position: absolute;
+    left: 0px;
+    top: 0px;*/
+}
+
+.title{
+    color:#E3EEF1;
+    font-size:40px;
+    position: relative;
+    letter-spacing: 1.5px;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    font-weight: 300;
+}
+
+.paragraph-one{
+    padding: 5% 10% 5%;
+}
+
+.title-content{
+    font-weight: 300;
+}
+
+.content{
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+}
+
+/*.chinese-content{
+    
+
+}*/
+
+
+/*RWD*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .title-content{
+        font-size: 18px;}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .title-content{
+        font-size: 20px;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .title-content{
+        font-size: 22.5px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .title-content{
+        font-size: 25px;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .title-content{
+        font-size: 27px;
+    }
+
+}

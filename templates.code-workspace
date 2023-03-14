@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../python_PC/studybud/templates"
+		},
+		{
+			"path": "../StudyBud-master/templates"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

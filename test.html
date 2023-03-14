@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="test.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async>
+        </script>
+        <title>
+            三角函數
+        </title>
+
+    </head>
+    <body>
+        <div class="hero-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(hero_img.jpg);">
+            <ul>
+                <li>
+                    <a href="self study.html" class="menu-one" id="menu-word">
+                        高中數學學習網站
+                    </a>
+                </li>
+                <li>
+                    <a href="self study trigonometric functions.html" class="menu-two" id="menu-word">
+                        三角函數
+                    </a>
+                </li>
+                <li>
+                    <a href="self study double angle formula.html" class= "menu-three" id="menu-word">
+                        三角函數倍角公式
+                    </a>
+                </li>
+            </ul>
+            <div class="title">
+                
+            </div>
+        </div>
+        <div class="paragraph-one">
+            <p class="title-content">
+                常用的三角比公式
+            </p><br>
+            <p class="content">
+                正弦定理<br>
+                \(\frac{a}{\sin A}=
+                  \frac{b}{\sin B}=
+                  \frac{c}{\sin C}=2R
+                  
+                \)<br>
+                
+                三角比關係<br>
+                商數關係：
+                \(\tan\theta=\frac{\sin\theta}{\cos\theta}\)
+                <br>
+                平方關係：
+                \(\sin^2\theta+\cos^2\theta=1\\\)
+                
+                正弦定理證明：<br>
+                <img src="sin.png"><br>
+                
+                \(\because\overset{\frown} {BC}\)對應到的兩個\(A D\)角的角度相同<br>
+                \(\therefore\sin A=\sin D\)
+                \(\because\sin D=\frac{a}{2R}\\\)
+                \(\therefore\sin A=\sin D=\frac{a}{2R}\\\)
+                換算得\(2R=\frac{a}{\sin A}\\\)
+
+                餘弦定理<br>
+                \(a^2=b^2+c^2-2bc \cos A\\
+                  b^2=c^2+a^2-2ca \cos B\\
+                  c^2=a^2+b^2-2ab \cos C\)
+                餘弦定理證明：<br>
+                <img src="cos_proof.png"><br>
+                \(a^2=\overline{BC}^2\\
+                  =\overline{CD}^2+\overline{BD}^2\\
+                  =(b\sin A)^2+(c-b\cos A)^2\\
+                  =b^2+c^2-2bc \cos A\)
+                  得證：\(a^2=b^2+c^2-2bc \cos A\\\)
+                餘弦\(\cos\)和角公式：<br>
+                <img src="cos_Trigonometric_Identities.png"><br>
+                P點座標為\((\cos \alpha,\sin \alpha)\)<br>
+                Q點座標為\((\cos \beta, \cos \beta)\)
+                因為圓O為單位圓，而P、Q在圓的邊長上，所以\(\overline{PO},\overline{QO}\)長度為一<br>
+                根據餘弦定理，\(\overline{PQ}^2=\overline{PO}^2+\overline{QO}^2 -2\overline{PO} \times \overline{QO} \times \cos (\alpha - \beta)\\\)
+                \(\overline{PQ}^2= 1^2+1^2-2\times 1 \times 1 \times \cos(\alpha-\beta)\\\)
+                =2 - 2 \(\cos(\alpha-\beta)\)<br>
+                而根據畢氏定理<br>
+                \(\overline{PQ}^2=\overline{PO}^2+\overline{QO}^2\)<br>
+                =\((\cos \alpha - \cos \beta)^2+(\sin \alpha - \sin \beta)^2\)<br>
+                =\((\cos^2 \alpha+\cos^2\beta -2\cos\alpha\times\cos\beta)\)
+                \(+(\sin ^2\alpha+\sin ^2\beta-2\sin\alpha\times\sin\beta)\)<br>
+                =2-2\((\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta)\)<br>
+                將兩個算式合併之後：<br>
+                \(\overline{PQ}^2=2 - 2 \cos(\alpha-\beta)\)<br>
+                =2-2\((\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta)\)<br>
+                化減之後
+                \(\cos (\alpha-\beta)=\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta\\\)
+                餘弦\(\cos\)差角公式：<br>
+                \(\cos(\alpha+\beta)=\cos(\alpha-(-\beta))\\\)
+                \(=\cos \alpha \times \cos (-\beta)+\sin \alpha \times \sin (-\beta)\\\)
+                \(=\cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta\\\)
+                所以 \(\cos (\alpha +\beta) = \cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta \\\)
+                正弦\(\sin\)和角公式：<br>
+                \(\sin (\alpha + \beta) = \cos (90^{\circ} - (\alpha + \beta))\\\)
+                \(=\cos((90^{\circ}-\alpha)-\beta)\\\)
+                \(=\cos(90^{\circ}-\alpha)\times \cos\beta -\sin (90^{\circ}-\alpha)\times \sin -\beta\\\)
+                \(=\sin\alpha\times\cos\beta +\cos\alpha\times\sin\beta\\\)
+                餘弦\(\sin\)差角公式：<br>
+                \(\sin(\alpha - \beta)=\sin (\alpha+(-\beta))\\\)
+                \(=\sin \alpha \times \cos (-\beta) + \cos \alpha \times \sin (-\beta)\\\)
+                \(=\sin \alpha \times \cos \beta - \cos \alpha \times \sin \beta\\\)
+                正切\(\tan\)和角證明：<br>
+                \(\tan(\alpha+\beta)=\frac{\sin(\alpha+\beta)}{\cos(\alpha+\beta)}\\\)
+
+                \(=\frac{\sin \alpha \cos \beta + \cos \alpha \sin \beta}{\cos \alpha \cos \beta - \sin \alpha \sin \beta}\\\)
+
+                \(=\frac{\frac{\sin \alpha \cos \beta + \cos \alpha \sin \beta}{\cos \alpha\cos\beta}}
+                {\frac{\cos \alpha \cos \beta - \sin \alpha \sin \beta}{\cos \alpha\cos\beta}}\\\)
+
+                \(=\frac{\frac{\sin \alpha \cos \beta}{\cos \alpha\cos\beta } + \frac{\cos \alpha \sin \beta}{\cos \alpha\cos\beta}}
+                {\frac{\cos \alpha \cos \beta}{\cos \alpha \cos \beta} - \frac{\sin \alpha \sin \beta}{\cos \alpha \cos \beta}}\\\)
+
+                \(=\frac{\frac{\sin\alpha}{\cos\alpha}+\frac{\sin\beta}{\cos\beta}}
+                {1-\frac{\sin\alpha}{\cos\alpha}\times\frac{\sin\beta}{\cos\beta}}\\\)
+
+                \(=\frac{\tan \alpha+\tan \beta}{1-\tan\alpha\tan\beta}\\\)
+
+                正切\(\tan\)差角證明：<br>
+                \(\tan (\alpha - \beta)=\tan (\alpha+(-\beta))\\\)
+                \(=\frac{\tan \alpha+\tan -\beta}{1-\tan\alpha\tan-\beta}\\\)
+                \(=\frac{\tan \alpha-\tan \beta}{1+\tan\alpha\tan\beta}\\\)
+
+            </p>
+            
+            
+            
+        </div>
+    </body>
+</html>
