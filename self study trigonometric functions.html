@@ -10,7 +10,28 @@
 		async></script>
 	<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
 	<script src="https://tikzjax.com/v1/tikzjax.js"></script>
-
+	<script>
+		window.MathJax = {
+			loader: {load: ['[tex]/mhchem']},
+			tex: {packages: {'[+]': ['mhchem']}}
+		  };
+		  MathJax = {
+			chtml: {
+			  scale: 1,                      // global scaling factor for all expressions
+			  minScale: .75,                  // smallest scaling factor to use
+			  mtextInheritFont: false,       // true to make mtext elements use surrounding font
+			  merrorInheritFont: false,      // true to make merror text use surrounding font
+			  mtextFont: '',                 // font to use for mtext, if not inheriting (empty means use MathJax fonts)
+			  merrorFont: 'serif',           // font to use for merror, if not inheriting (empty means use MathJax fonts)
+			  unknownFamily: 'serif',        // font to use for character that aren't in MathJax's fonts
+			  mathmlSpacing: false,          // true for MathML spacing rules, false for TeX rules
+			  skipAttributes: {},            // RFDa and other attributes NOT to copy to the output
+			  exFactor: .75,                  // default size of ex in em units
+			  displayAlign: 'left',        // default for indentalign when set to 'auto'
+			  displayIndent: '0'             // default for indentshift when set to 'auto'
+			}
+		  };
+	</script>
 
 	<title>
 		三角函數
@@ -27,7 +48,6 @@
 </style>
 
 <body>
-
 	<div class="header">
 		<ul>
 			<li>
@@ -66,7 +86,7 @@
 			\)<br>
 
 			三角比關係<br>
-			商數關係：
+			商數關係：<br>
 			\(\tan\theta=\frac{\sin\theta}{\cos\theta}\)
 			<br>
 			平方關係：
@@ -96,12 +116,11 @@
 		\(\therefore\sin A=\sin D\\
 		\because\sin D=\frac{a}{2R}\\
 		\therefore\sin A=\sin D=\frac{a}{2R}\\\)
-		換算得\(2R=\frac{a}{\sin A}\)
-
-		餘弦定理<br>
-		\(a^2=b^2+c^2-2bc \cos A\\
-		b^2=c^2+a^2-2ca \cos B\\
-		c^2=a^2+b^2-2ab \cos C\)
+		換算得\(2R=\frac{a}{\sin A}\)<br><br>
+		餘弦定理：<br><br>
+		\(a^2=b^2+c^2-2bc \cos A\\\\
+		b^2=c^2+a^2-2ca \cos B\\\\
+		c^2=a^2+b^2-2ab \cos C\)<br><br>
 		餘弦定理證明：<br>
 		<div class="photo">
 			<script type="text/tikz">
@@ -121,60 +140,87 @@
 				\end{tikzpicture}
 			</script>
 		</div>
-		\(a^2=\overline{BC}^2\\
-		=\overline{CD}^2+\overline{BD}^2\\
-		=(b\sin A)^2+(c-b\cos A)^2\\
-		=b^2+c^2-2bc \cos A\)
-		得證：\(a^2=b^2+c^2-2bc \cos A\\\)
+		\(
+			\begin{aligned}
+				a^2 & = \overline{BC}^2\\
+				& = \overline{CD}^2 + \overline{BD}^2\\
+				& = (b\sin A)^2 + (c-b\cos A)^2\\
+				& = b^2 + c^2 - 2bc \cos A
+			\end{aligned}
+		\)<br><br>
+		得證：<br><br>
+		\(a^2=b^2+c^2-2bc \cos A\\\)
 		餘弦\(\cos\)和角公式：<br>
 		<img src="cos_Trigonometric_Identities.png"><br>
 		P點座標為\((\cos \alpha,\sin \alpha)\)<br>
 		Q點座標為\((\cos \beta, \cos \beta)\)
 		因為圓O為單位圓，而P、Q在圓的邊長上，所以\(\overline{PO},\overline{QO}\)長度為一<br>
-		根據餘弦定理，\(\overline{PQ}^2=\overline{PO}^2+\overline{QO}^2 -2\overline{PO} \times \overline{QO} \times \cos
-		(\alpha - \beta)\\\)
-		\(\overline{PQ}^2= 1^2+1^2-2\times 1 \times 1 \times \cos(\alpha-\beta)\\\)
-		=2 - 2 \(\cos(\alpha-\beta)\)<br>
+		根據餘弦定理:
+		\(
+			\begin{aligned}
+				\overline{PQ}^2 &=\overline{PO}^2+\overline{QO}^2 -2\overline{PO} \times \overline{QO} \times \cos(\alpha - \beta)\\
+				\overline{PQ}^2 &= 1^2+1^2-2\times 1 \times 1 \times \cos(\alpha-\beta)\\
+				&=2 - 2 \cos(\alpha-\beta)
+			\end{aligned}
+
+		\)<br><br>
 		而根據畢氏定理<br><br>
-		\(\overline{PQ}^2=\overline{PO}^2+\overline{QO}^2\)<br>
-		=\((\cos \alpha - \cos \beta)^2+(\sin \alpha - \sin \beta)^2\)<br>
-		=\((\cos^2 \alpha+\cos^2\beta -2\cos\alpha\times\cos\beta)\)
-		\(+(\sin ^2\alpha+\sin ^2\beta-2\sin\alpha\times\sin\beta)\)<br>
-		=2-2\((\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta)\)<br>
+		\(
+			\begin{aligned}
+				\overline{PQ}^2 & =\overline{PO}^2+\overline{QO}^2\\
+				&=(\cos \alpha - \cos \beta)^2+(\sin \alpha - \sin \beta)^2\\
+				&=(\cos^2 \alpha+\cos^2\beta -2\cos\alpha\times\cos\beta)+(\sin ^2\alpha+\sin ^2\beta-2\sin\alpha\times\sin\beta)\\
+				&=2-2(\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta)
+			\end{aligned}
+		\)<br><br>
 		將兩個算式合併之後：<br><br>
 		\(\overline{PQ}^2=2 - 2 \cos(\alpha-\beta)\)<br>
 		=2-2\((\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta)\)<br>
-		化減之後
+		化簡之後
 		\(\cos (\alpha-\beta)=\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta\\\)
 		餘弦\(\cos\)差角公式：<br><br>
-		\(\displaystyle\cos(\alpha+\beta)=\cos(\alpha-(-\beta))\\\)
-		\(\displaystyle=\cos \alpha \times \cos (-\beta)+\sin \alpha \times \sin (-\beta)\\\)
-		\(\displaystyle=\cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta\\\)
-		所以 \(\cos (\alpha +\beta) = \cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta \\\)
+		\(
+			\begin{aligned}
+				\displaystyle\cos(\alpha+\beta) & =\cos(\alpha-(-\beta))\\
+				\displaystyle & =\cos \alpha \times \cos (-\beta)+\sin \alpha \times \sin (-\beta)\\
+				\displaystyle & =\cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta\\
+				\cos (\alpha +\beta) & = \cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta
+			\end{aligned}
+		\)<br><br>
 		正弦\(\sin\)和角公式：<br><br>
-		\(\displaystyle\sin (\alpha + \beta) = \cos (90^{\circ} - (\alpha + \beta))\\\)
-		\(\displaystyle=\cos((90^{\circ}-\alpha)-\beta)\\\)
-		\(\displaystyle=\cos(90^{\circ}-\alpha)\times \cos\beta -\sin (90^{\circ}-\alpha)\times \sin -\beta\\\)
-		\(\displaystyle=\sin\alpha\times\cos\beta +\cos\alpha\times\sin\beta\\\)
+		\(
+			\begin{aligned}
+				\displaystyle\sin (\alpha + \beta) &= \cos (90^{\circ} - (\alpha + \beta))\\
+				\displaystyle &=\cos((90^{\circ}-\alpha)-\beta)\\
+				\displaystyle &=\cos(90^{\circ}-\alpha)\times \cos\beta -\sin (90^{\circ}-\alpha)\times \sin -\beta\\
+				\displaystyle &=\sin\alpha\times\cos\beta +\cos\alpha\times\sin\beta\\
+			\end{aligned}
+		\)<br><br>
 		餘弦\(\sin\)差角公式：<br><br>
-		\(\sin(\alpha - \beta)=\sin (\alpha+(-\beta))\\\)
-		\(=\sin \alpha \times \cos (-\beta) + \cos \alpha \times \sin (-\beta)\\\)
-		\(=\sin \alpha \times \cos \beta - \cos \alpha \times \sin \beta\\\)
+		\(
+			\begin{aligned}
+				\sin(\alpha - \beta) & = \sin (\alpha+(-\beta))\\
+				& =\sin \alpha \times \cos (-\beta) + \cos \alpha \times \sin (-\beta)\\
+				& =\sin \alpha \times \cos \beta - \cos \alpha \times \sin \beta\\
+			\end{aligned}
+		\)<br><br>
 		正切\(\tan\)和角證明：<br><br>
-		\(\displaystyle
-		\tan(\alpha+\beta)=\frac{\sin(\alpha+\beta)}{\cos(\alpha+\beta)}\\
-		\displaystyle = \frac{\sin \alpha \cos \beta + \cos \alpha \sin \beta}{\cos \alpha \cos \beta - \sin \alpha \sin
-		\beta}\\
-		\displaystyle = \frac{\frac{\sin \alpha \cos \beta + \cos \alpha \sin \beta}{\cos \alpha\cos\beta}}
-		{\frac{\cos \alpha \cos \beta - \sin \alpha \sin \beta}{\cos \alpha\cos\beta}}\\
-		\displaystyle= \frac{\frac{\sin \alpha \cos \beta}{\cos \alpha\cos\beta } + \frac{\cos \alpha \sin \beta}{\cos
-		\alpha\cos\beta}}
-		{\frac{\cos \alpha \cos \beta}{\cos \alpha \cos \beta} - \frac{\sin \alpha \sin \beta}{\cos \alpha \cos
-		\beta}}\\
-		\displaystyle= \frac{\frac{\sin\alpha}{\cos\alpha}+\frac{\sin\beta}{\cos\beta}}
-		{1-\frac{\sin\alpha}{\cos\alpha}\times\frac{\sin\beta}{\cos\beta}}\\
-		\displaystyle = \frac{\tan \alpha+\tan \beta}{1-\tan\alpha\tan\beta}
-		\)
+		\(
+			\begin{aligned}
+				\tan(\alpha+\beta) & =\frac{\sin(\alpha+\beta)}{\cos(\alpha+\beta)}\\
+				\displaystyle & = \frac{\sin \alpha \cos \beta + \cos \alpha \sin \beta}{\cos \alpha \cos \beta - \sin \alpha \sin
+				\beta}\\
+				\displaystyle & = \frac{\frac{\sin \alpha \cos \beta + \cos \alpha \sin \beta}{\cos \alpha\cos\beta}}
+				{\frac{\cos \alpha \cos \beta - \sin \alpha \sin \beta}{\cos \alpha\cos\beta}}\\
+				\displaystyle & = \frac{\frac{\sin \alpha \cos \beta}{\cos \alpha\cos\beta } + \frac{\cos \alpha \sin \beta}{\cos
+				\alpha\cos\beta}}
+				{\frac{\cos \alpha \cos \beta}{\cos \alpha \cos \beta} - \frac{\sin \alpha \sin \beta}{\cos \alpha \cos
+				\beta}}\\
+				\displaystyle & = \frac{\frac{\sin\alpha}{\cos\alpha}+\frac{\sin\beta}{\cos\beta}}
+				{1-\frac{\sin\alpha}{\cos\alpha}\times\frac{\sin\beta}{\cos\beta}}\\
+				\displaystyle & = \frac{\tan \alpha+\tan \beta}{1-\tan\alpha\tan\beta}
+			\end{aligned}
+		\)<br><br>
 		正切\(\tan\)差角證明：<br>
 		\(\displaystyle\tan (\alpha - \beta)=\tan (\alpha+(-\beta))\\\)
 		\(\displaystyle=\frac{\tan \alpha+\tan -\beta}{1-\tan\alpha\tan-\beta}\\\)
