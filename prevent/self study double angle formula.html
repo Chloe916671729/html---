@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="self study.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async>
+        </script>
+        <title>
+            三角函數倍角
+        </title>
+    </head>
+    <body>
+        <div class="header">
+            <ul>
+                <li>
+                    <a href="self study.html" class="menu-one" id="menu-word">
+                        首頁
+                    </a>
+                </li>
+                <li>
+                    <a href="self study trigonometric functions.html" class="menu-two" id="menu-word">
+                        和差角公式
+                    </a>
+                </li>
+                <li>
+                    <a href="self study double angle formula.html" class= "menu-three" id="menu-word">
+                        倍角公式
+                    </a>
+                </li>
+            </ul>
+        
+            <div class="title">
+                三角函數倍角公式
+            </div>
+        </div>
+        <div class="paragraph-one">
+            <p class="title-content">二倍角公式</p><br>
+
+            <p class="content">
+                正弦的二倍角公式 \(\sin 2\theta = 2\sin\theta\cos\theta\)<br>
+                根據和角公式
+                \(\sin (\alpha+\beta)=\sin \alpha \cos \beta + \cos \alpha \sin \beta\)<br>
+                令\(\theta=\alpha=\beta\)帶入<br>
+                得\(\sin(\theta+\theta)=\sin\theta\cos\theta+\cos\theta\sin\theta\)
+                <br>
+                得證\(\sin 2\theta = 2\sin\theta\cos\theta\\\)
+                
+                餘弦的二倍角公式<br>
+                \(\cos 2\theta=\cos^2\theta-\sin^2\theta=2\cos^2\theta-1=1-2\sin^2\theta\)<br>
+                根據和角公式\(\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta\)<br>
+                令\(\theta= \alpha=\beta\)帶入<br>
+                \(\cos(\theta+\theta)=\cos\theta\cos\theta-\sin\theta\sin\theta\)<br>
+                \(\cos 2\theta= \cos^2\theta-\sin^2\theta\\\)
+
+                根據平方關係式 \(\sin^2 \theta +\cos^2 \theta=1\)<br>
+                所以\(\sin^2\theta =1 -\cos^2\theta\)<br>
+                帶入\(\cos 2\theta= \cos^2\theta-\sin^2\theta\)<br>
+                \(\cos 2\theta= \cos^2\theta-(1 -\cos^2\theta)\)<br>
+                \(\cos 2\theta= 2\cos^2\theta-1\\\)
+
+                根據平方關係式\(\cos^2\theta=1-\sin^2\theta\)<br>
+                帶入\(\cos 2\theta= \cos^2\theta-\sin^2\theta\)<br>
+                \(\cos 2\theta= 1-\sin^2\theta-\sin^2\theta\)<br>
+                \(\cos2\theta=1-2\sin^2\theta\\\)
+
+
+                正切的二倍角公式<br>
+                \(\tan2\theta=\frac{2\tan\theta}{1-\tan^2\theta}\)<br>
+                根據和角公式
+                \(\tan(\alpha+\beta) =\frac{\tan \alpha+\tan \beta}{1-\tan\alpha\tan\beta}\)
+                <br>
+                令\(\theta=\alpha=\beta\)<br>
+                \(\tan(\theta+\theta) =\frac{\tan \theta+\tan \theta}{1-\tan\theta\tan\theta}\)<br>
+                \(\tan2\theta =\frac{\tan 2\theta}{1-\tan^2 \theta}\)
+
+            </p>
+        </div>
+    </body>
+</html>
