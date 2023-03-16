@@ -128,12 +128,6 @@ ul{
 
 }*/
 
-.index-container{
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-
-}
-
 
 /*RWD*/
 /* Extra small devices (phones, 600px and down) */
