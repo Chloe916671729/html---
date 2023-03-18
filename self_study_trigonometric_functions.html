@@ -44,11 +44,192 @@
 			</li>
 		</ul>
 
-
 		<div class="title">
-			三角函數
+			三角函數和差角公式
 		</div>
 	</div>
+
+	<div class="index-container">
+		<div class="paragraph-one">
+				<p class="title-content">
+					常用的三角比公式
+				</p><br>
+				<p class="content">
+					正弦定理<br>
+					\(\frac{a}{\sin A}=
+					\frac{b}{\sin B}=
+					\frac{c}{\sin C}=2R
+
+					\)<br>
+
+					三角比關係<br>
+					商數關係：<br>
+					\(\tan\theta=\frac{\sin\theta}{\cos\theta}\)
+					<br>
+					平方關係：
+					\(\sin^2\theta+\cos^2\theta=1\\\)
+
+					正弦定理證明：<br>
+				<div class="photo">
+					<script type="text/tikz" class="photo">
+						\usetikzlibrary{positioning}
+						\begin{tikzpicture}[x = 0.5in, y = 0.5in, line width = 2pt]
+						\draw (0,0) circle (2);
+						\filldraw (0,0) circle (0.05);
+						\draw (60:2)--(240:2)--(300:2)--cycle;
+						\draw (60:2)--(165:2)--(300:2)--cycle;
+						\node[left = 0.25in] at(60:1) {\Large\bf R};
+						\node[right] at(0:1.25) {\Large\bf a};
+						\node[left] at(100:1.75) {\Large\bf b};
+						\node[left = 0.25in] at(225:0.65) {\Large\bf c};
+						\node[left] at(162:2.1) {\Large\bf A};
+						\node[above right] at(65:2.1) {\Large\bf B};
+						\node[below right] at(300:2) {\Large\bf C};
+						\node[below left] at(240:2) {\Large\bf D};
+						\end{tikzpicture}
+					</script>
+				</div>
+				\(\because\overset{\frown}{BC}\)對應到的兩個\(A D\)角的角度相同<br>
+				\(\therefore\sin A=\sin D\\
+				\because\sin D=\frac{a}{2R}\\
+				\therefore\sin A=\sin D=\frac{a}{2R}\\\)
+				換算得\(2R=\frac{a}{\sin A}\)<br><br>
+				餘弦定理：<br><br>
+				\(a^2=b^2+c^2-2bc \cos A\\\\
+				b^2=c^2+a^2-2ca \cos B\\\\
+				c^2=a^2+b^2-2ab \cos C\)<br><br>
+				餘弦定理證明：<br>
+				<div class="photo">
+					<script type="text/tikz">
+						\usetikzlibrary{positioning}
+						\begin{tikzpicture}[x = 1in, y = 1in, line width = 2pt]
+						\node[below left](A) at({-1/tan(deg(35))},0) {A};
+						\node[below](B) at(1,0) {B};
+						\node[above = 0.15in](C) at(0,1) {C};
+						\node[below](D) at(0,0) {D};
+						\draw ({-1/tan(deg(35))},0)--(1,0)--(0,1)--cycle;
+						\draw (0,1)--(0,0);
+						\node[above right] at({-0.5/tan(deg(35))},0.7) {b};
+						\node[below] at({-0.5/tan(deg(35))},0) {$b\cos (A)$};
+						\node[left] at(0,0.5) {$b\sin (A)$};
+						\node[above right] at(0.5,0.7) {a};
+						\node[below] at(0.5,0) {$c-b\cos (A)$};
+						\end{tikzpicture}
+					</script>
+				</div>
+				\(
+					\begin{aligned}
+						a^2 & = \overline{BC}^2\\
+						& = \overline{CD}^2 + \overline{BD}^2\\
+						& = (b\sin A)^2 + (c-b\cos A)^2\\
+						& = b^2 + c^2 - 2bc \cos A
+					\end{aligned}
+				\)<br><br>
+				得證：<br><br>
+				\(a^2=b^2+c^2-2bc \cos A\\\)
+				餘弦\(\cos\)和角公式：<br>
+				<script type="text/tikz">
+					\begin{tikzpicture}[x = 1in, y =1in]
+						\draw[->] (0,-1.2)--(0,1.2);
+						\draw[->] (-1.2,0)--(1.2,0);
+						\node[right] at(0,1.2) {$y$};
+						\node[below] at(1.2,0) {$y$};
+						\node[below left] at(0,0) {$O$};
+						\draw (0,0) circle (1);
+						\draw (125:1)--(25:1)--(0,0)--cycle;
+						\node[] at(25:1.2) {$Q$};
+						\node[] at(125:1.2) {$P$};
+						\draw (0:0.2) arc (0:25:0.2);
+						\draw (25:0.3) arc (25:125:0.3);
+						\draw (0:0.4) arc (0:125:0.4);
+						\node[] at(12.5:0.25) {$\scriptscriptstyle\beta$};
+						\node[] at(65:0.45) {$\scriptscriptstyle\alpha$};
+						\node[] at(55:0.2) {$\scriptscriptstyle\alpha - \beta$};
+					\end{tikzpicture}
+				</script>
+				P點座標為\((\cos \alpha,\sin \alpha)\)<br>
+				Q點座標為\((\cos \beta, \cos \beta)\)
+				因為圓O為單位圓，而P、Q在圓的邊長上，所以\(\overline{PO},\overline{QO}\)長度為一<br>
+				根據餘弦定理:
+				\(
+					\begin{aligned}
+						\overline{PQ}^2 &=\overline{PO}^2+\overline{QO}^2 -2\overline{PO} \times \overline{QO} \times \cos(\alpha - \beta)\\
+						\overline{PQ}^2 &= 1^2+1^2-2\times 1 \times 1 \times \cos(\alpha-\beta)\\
+						&=2 - 2 \cos(\alpha-\beta)
+					\end{aligned}
+
+				\)<br><br>
+				而根據畢氏定理<br><br>
+				\(
+					\begin{aligned}
+						\overline{PQ}^2 & =\overline{PO}^2+\overline{QO}^2\\
+						&=(\cos \alpha - \cos \beta)^2+(\sin \alpha - \sin \beta)^2\\
+						&=(\cos^2 \alpha+\cos^2\beta -2\cos\alpha\times\cos\beta)+(\sin ^2\alpha+\sin ^2\beta-2\sin\alpha\times\sin\beta)\\
+						&=2-2(\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta)
+					\end{aligned}
+				\)<br><br>
+				將兩個算式合併之後：<br><br>
+				\(\overline{PQ}^2=2 - 2 \cos(\alpha-\beta)\)<br>
+				=2-2\((\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta)\)<br>
+				化簡之後
+				\(\cos (\alpha-\beta)=\cos\alpha\times\cos\beta+\sin\alpha\times\sin\beta\\\)
+				餘弦\(\cos\)差角公式：<br><br>
+				\(
+					\begin{aligned}
+						\displaystyle\cos(\alpha+\beta) & =\cos(\alpha-(-\beta))\\
+						\displaystyle & =\cos \alpha \times \cos (-\beta)+\sin \alpha \times \sin (-\beta)\\
+						\displaystyle & =\cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta\\
+						\cos (\alpha +\beta) & = \cos \alpha \times \cos \beta - \sin \alpha \times \sin \beta
+					\end{aligned}
+				\)<br><br>
+				正弦\(\sin\)和角公式：<br><br>
+				\(
+					\begin{aligned}
+						\displaystyle\sin (\alpha + \beta) &= \cos (90^{\circ} - (\alpha + \beta))\\
+						\displaystyle &=\cos((90^{\circ}-\alpha)-\beta)\\
+						\displaystyle &=\cos(90^{\circ}-\alpha)\times \cos\beta -\sin (90^{\circ}-\alpha)\times \sin -\beta\\
+						\displaystyle &=\sin\alpha\times\cos\beta +\cos\alpha\times\sin\beta\\
+					\end{aligned}
+				\)<br><br>
+				餘弦\(\sin\)差角公式：<br><br>
+				\(
+					\begin{aligned}
+						\sin(\alpha - \beta) & = \sin (\alpha+(-\beta))\\
+						& =\sin \alpha \times \cos (-\beta) + \cos \alpha \times \sin (-\beta)\\
+						& =\sin \alpha \times \cos \beta - \cos \alpha \times \sin \beta\\
+					\end{aligned}
+				\)<br><br>
+				正切\(\tan\)和角證明：<br><br>
+				\(
+					\begin{aligned}
+						\tan(\alpha+\beta) & =\frac{\sin(\alpha+\beta)}{\cos(\alpha+\beta)}\\
+						\displaystyle & = \frac{\sin \alpha \cos \beta + \cos \alpha \sin \beta}{\cos \alpha \cos \beta - \sin \alpha \sin
+						\beta}\\
+						\displaystyle & = \frac{\frac{\sin \alpha \cos \beta + \cos \alpha \sin \beta}{\cos \alpha\cos\beta}}
+						{\frac{\cos \alpha \cos \beta - \sin \alpha \sin \beta}{\cos \alpha\cos\beta}}\\
+						\displaystyle & = \frac{\frac{\sin \alpha \cos \beta}{\cos \alpha\cos\beta } + \frac{\cos \alpha \sin \beta}{\cos
+						\alpha\cos\beta}}
+						{\frac{\cos \alpha \cos \beta}{\cos \alpha \cos \beta} - \frac{\sin \alpha \sin \beta}{\cos \alpha \cos
+						\beta}}\\
+						\displaystyle & = \frac{\frac{\sin\alpha}{\cos\alpha}+\frac{\sin\beta}{\cos\beta}}
+						{1-\frac{\sin\alpha}{\cos\alpha}\times\frac{\sin\beta}{\cos\beta}}\\
+						\displaystyle & = \frac{\tan \alpha+\tan \beta}{1-\tan\alpha\tan\beta}
+					\end{aligned}
+				\)<br><br>
+				正切\(\tan\)差角證明：<br>
+				\(\displaystyle\tan (\alpha - \beta)=\tan (\alpha+(-\beta))\\\)
+				\(\displaystyle=\frac{\tan \alpha+\tan -\beta}{1-\tan\alpha\tan-\beta}\\\)
+				\(\displaystyle=\frac{\tan \alpha-\tan \beta}{1+\tan\alpha\tan\beta}\\\)
+
+
+				</p>
+
+			<div class="title">
+				三角函數
+			</div>
+		</div>
+	</div>
+	<!--
 	<div class="index-container">
 		<div>
 			<ul>
@@ -246,5 +427,5 @@
 
 
 		</div>
-	</div>
+	</div>-->
 </body>
